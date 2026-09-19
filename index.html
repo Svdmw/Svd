@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVD Mining Works | Earth Works • Drilling • Blasting • Transportation</title>
+<meta name="description" content="Sri Venkata Durga Mining Works — integrated earth works, drilling, blasting and transportation capability from Anantapur, Andhra Pradesh.">
+<style>
+:root{
+  --ink:#08100e;--panel:#101916;--panel2:#16221e;--green:#00ff88;--green2:#00b86b;
+  --sand:#d7c7a1;--white:#f4f7f5;--muted:#9aa9a2;--line:rgba(255,255,255,.11);
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--ink);color:var(--white);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--green);color:#00140b}
+.container{width:min(var(--max),92%);margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(8,16,14,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
+.brand-mark{width:42px;height:42px;border:1px solid rgba(0,255,136,.55);display:grid;place-items:center;color:var(--green);font-weight:950;font-size:14px;transform:skew(-8deg)}
+.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.2em;font-weight:700}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-size:12px;color:#dce6e1;letter-spacing:.09em;text-transform:uppercase}
+nav a:hover{color:var(--green)}
+.nav-cta{border:1px solid rgba(0,255,136,.55);padding:10px 14px;color:var(--green)!important}
+.menu{display:none;background:none;border:0;color:var(--white);font-size:28px}
+.hero{min-height:100vh;position:relative;display:grid;align-items:end;overflow:hidden;background:
+linear-gradient(90deg,rgba(4,10,8,.98) 0%,rgba(4,10,8,.84) 45%,rgba(4,10,8,.38) 100%),
+url("assets/ppt-image-1.jpg") center/cover fixed}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,var(--ink));}
+.hero-inner{position:relative;z-index:2;padding:150px 0 105px;max-width:980px}
+.kicker{color:var(--green);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:900}
+.hero h1{font-size:clamp(48px,8vw,108px);line-height:.92;letter-spacing:-.055em;margin:20px 0}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p{max-width:720px;color:#c9d3ce;font-size:clamp(16px,2vw,20px)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:13px 18px;border:1px solid var(--line);display:inline-flex;gap:9px;align-items:center;text-transform:uppercase;font-size:11px;font-weight:900;letter-spacing:.12em}
+.btn-primary{background:var(--green);color:#00140b;border-color:var(--green)}
+.btn-primary:hover{box-shadow:0 0 30px rgba(0,255,136,.24)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.hero-meta{margin-top:55px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);padding-top:20px;gap:20px}
+.meta strong{font-size:27px;display:block;color:var(--green)}
+.meta span{font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:#0b1411}
+.marquee-track{display:flex;gap:55px;white-space:nowrap;width:max-content;padding:13px 0;animation:scroll 28s linear infinite;color:#b9c7c1;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.marquee b{color:var(--green)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:105px 0}
+.section-top{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:50px}
+.eyebrow{color:var(--green);font-size:10px;letter-spacing:.2em;font-weight:900;text-transform:uppercase}
+h2{font-size:clamp(38px,5vw,68px);line-height:.98;letter-spacing:-.045em;margin-top:10px}
+.lead{max-width:560px;color:var(--muted);font-size:16px}
+.about{background:linear-gradient(180deg,#0b1411,#08100e)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.about-copy p{color:#b6c2bc;margin:20px 0}
+.statement{border-left:2px solid var(--green);padding-left:22px;color:#e9efec;font-size:21px;line-height:1.45;margin-top:28px}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.signal{background:var(--panel);padding:28px;min-height:160px}
+.signal b{color:var(--green);font-size:12px;letter-spacing:.12em}
+.signal h3{margin:14px 0 7px;font-size:18px}
+.signal p{font-size:13px;color:var(--muted)}
+.capabilities{background:#0d1714}
+.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.cap{position:relative;min-height:310px;padding:28px;background:var(--panel);overflow:hidden;border:1px solid transparent;transition:.35s}
+.cap:hover{border-color:rgba(0,255,136,.45);transform:translateY(-5px)}
+.cap .num{font-size:11px;color:var(--green);font-weight:900}
+.cap .glyph{font-size:42px;margin:45px 0 18px;filter:grayscale(1)}
+.cap h3{font-size:24px}
+.cap p{font-size:13px;color:var(--muted);margin-top:8px}
+.cap::after{content:"";position:absolute;width:90px;height:90px;border:1px solid rgba(0,255,136,.08);border-radius:50%;right:-25px;bottom:-25px}
+.dark-band{background:var(--green);color:#03150d;padding:30px 0}
+.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.band-item strong{display:block;font-size:32px;line-height:1}
+.band-item span{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}
+.projects{background:#070d0b}
+.timeline{position:relative;border-left:1px solid rgba(0,255,136,.3);margin-left:10px}
+.project-card{position:relative;margin:0 0 18px 28px;border:1px solid var(--line);background:var(--panel);display:grid;grid-template-columns:120px 1fr;transition:.3s}
+.project-card:hover{border-color:rgba(0,255,136,.45);transform:translateX(5px)}
+.project-card::before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--green);left:-33px;top:28px;box-shadow:0 0 16px rgba(0,255,136,.7)}
+.project-year{padding:25px 18px;color:var(--green);font-size:11px;font-weight:900;border-right:1px solid var(--line)}
+.project-body{padding:23px 25px}
+.project-body h3{font-size:21px;margin:3px 0}
+.project-body p{color:var(--muted);font-size:13px}
+.project-value{float:right;color:var(--sand);font-weight:900;font-size:13px}
+.tags{margin-top:10px;color:#d1ddd7;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.fleet{background:#101916}
+.table-wrap{overflow:auto;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th,td{padding:15px 18px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}
+th{color:var(--green);font-size:10px;letter-spacing:.13em;text-transform:uppercase;background:#0a120f}
+td{color:#c8d2cd}
+tr:last-child td{border:0}
+.leadership{background:linear-gradient(135deg,#0b1411,#14221d)}
+.leader-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.leader{background:var(--panel);padding:35px}
+.leader .initials{width:72px;height:72px;border:1px solid rgba(0,255,136,.45);display:grid;place-items:center;color:var(--green);font-size:22px;font-weight:950;margin-bottom:25px}
+.leader h3{font-size:27px}
+.role{color:var(--green);font-size:10px;letter-spacing:.15em;font-weight:900;text-transform:uppercase}
+.leader p{color:var(--muted);margin-top:12px;font-size:14px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.principle{border-top:2px solid var(--green);padding-top:18px}
+.principle b{font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+.principle p{font-size:13px;color:var(--muted);margin-top:8px}
+.gallery{background:#060a08}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery-tile{position:relative;border:0;background:#111;height:260px;overflow:hidden;cursor:pointer}
+.gallery-tile img{width:100%;height:100%;object-fit:cover;opacity:.76;transition:.5s}
+.gallery-tile span{position:absolute;left:14px;bottom:14px;font-size:9px;letter-spacing:.14em;font-weight:900;color:#fff;background:rgba(0,0,0,.6);padding:7px 9px}
+.gallery-tile:hover img{transform:scale(1.07);opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1100px,94vw);max-height:85vh;object-fit:contain}
+.close{position:absolute;top:22px;right:25px;color:#fff;background:none;border:0;font-size:36px;cursor:pointer}
+.contact{background:var(--green);color:#02150d}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{color:#02150d}
+.contact p{margin-top:15px;max-width:560px}
+.contact-card{background:#07150f;color:#eaf2ee;padding:30px}
+.contact-row{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.contact-row:last-child{border:0}
+.contact-row b{display:block;color:var(--green);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+.contact-row span{display:block;margin-top:4px}
+footer{padding:45px 0;background:#030806;color:#87958e}
+.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:start}
+.footer-brand{color:#fff;font-weight:900;letter-spacing:.12em}
+footer small{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){
+ nav{display:none;position:absolute;top:78px;left:0;right:0;background:#08100e;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+ nav.open{display:flex} .menu{display:block}
+ .hero-meta,.cap-grid,.band-grid{grid-template-columns:1fr 1fr}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .gallery-grid{grid-template-columns:1fr 1fr}
+ .section-top{display:block} .lead{margin-top:18px}
+}
+@media(max-width:600px){
+ .nav{height:68px} .hero{background-attachment:scroll}
+ .hero-inner{padding:125px 0 75px} .hero-meta,.cap-grid,.band-grid,.leader-grid,.gallery-grid,.principles{grid-template-columns:1fr}
+ section{padding:75px 0}
+ .project-card{grid-template-columns:1fr} .project-year{border-right:0;border-bottom:1px solid var(--line)}
+ .project-value{float:none;display:block;margin-bottom:8px}
+ .footer-grid{display:block} footer small{display:block;margin-top:15px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="brand-mark">SVD</span><span>SVD MINING WORKS<small>ANANTAPUR • ANDHRA PRADESH</small></span></a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#about">Company</a><a href="#capabilities">Capabilities</a><a href="#projects">Projects</a>
+      <a href="#fleet">Fleet</a><a href="#leadership">Leadership</a><a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="kicker">2014 — PRESENT / CORPORATE PROFILE</div>
+    <h1>CRAFTING LANDMARKS.<br><em>CREATING LEGACIES.</em></h1>
+    <p>Integrated ground-work capability for demanding infrastructure, mining and civil environments — Earth Works, Drilling, Blasting and Transportation under one coordinated operating model.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">Explore Projects ↗</a>
+      <a class="btn btn-ghost" href="#contact">Start a Conversation</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta"><strong>2014</strong><span>Established</span></div>
+      <div class="meta"><strong>60</strong><span>Fleet units listed</span></div>
+      <div class="meta"><strong>₹60+ Cr</strong><span>Stated cumulative value</span></div>
+      <div class="meta"><strong>4</strong><span>Core disciplines</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track">
+  <span>EARTH WORKS <b>•</b></span><span>DRILLING <b>•</b></span><span>BLASTING <b>•</b></span><span>TRANSPORTATION <b>•</b></span>
+  <span>EARTH WORKS <b>•</b></span><span>DRILLING <b>•</b></span><span>BLASTING <b>•</b></span><span>TRANSPORTATION <b>•</b></span>
+</div></div>
+
+<section class="about" id="about">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">01 / COMPANY</div><h2>BUILT FOR<br>GROUND REALITIES.</h2></div>
+  <p class="lead">Sri Venkata Durga Mining Works is presented in the supplied profile as an execution-focused infrastructure partner headquartered in Anantapur, Andhra Pradesh.</p></div>
+  <div class="about-grid">
+   <div class="about-copy">
+    <p>The profile describes a Micro Enterprise registered under Udyam MSME, specializing in Earth Works, Drilling, Blasting and Transportation, with operations driven by professionalism, accountability and sustainable development.</p>
+    <div class="statement">“Skilled manpower. Modern equipment. Efficient project management.”</div>
+    <p>Its operating model is designed around execution discipline, technical capability, safety culture and project reliability.</p>
+   </div>
+   <div class="signal-grid">
+    <div class="signal"><b>01</b><h3>Execution discipline</h3><p>Site-ready teams, structured planning and coordinated delivery.</p></div>
+    <div class="signal"><b>02</b><h3>Technical capability</h3><p>Four integrated ground-work disciplines under one operating umbrella.</p></div>
+    <div class="signal"><b>03</b><h3>Safety culture</h3><p>Risk assessment, statutory compliance and safe operating procedures.</p></div>
+    <div class="signal"><b>04</b><h3>Project reliability</h3><p>Skilled manpower, modern equipment and schedule-focused execution.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="capabilities" id="capabilities">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">02 / CORE CAPABILITIES</div><h2>FOUR DISCIPLINES.<br>ONE DELIVERY MODEL.</h2></div><p class="lead">Integrated capability across the complete ground-work cycle, as documented in the company profile.</p></div>
+  <div class="cap-grid">
+   <article class="cap reveal"><div class="num">01</div><div class="glyph">⛏</div><h3>DRILLING</h3><p>Systematic drilling planned around strata, depth, patterns and project requirements.</p></article>
+   <article class="cap reveal"><div class="num">02</div><div class="glyph">◈</div><h3>BLASTING</h3><p>Controlled blasting using approved designs, charge loading, delay systems and stemming.</p></article>
+   <article class="cap reveal"><div class="num">03</div><div class="glyph">▰</div><h3>EARTH WORKS</h3><p>Excavation, loading, grading and site development supported by heavy equipment.</p></article>
+   <article class="cap reveal"><div class="num">04</div><div class="glyph">▱</div><h3>TRANSPORTATION</h3><p>Tipper-led material movement supported by a diverse transport and support fleet.</p></article>
+  </div>
+ </div>
+</section>
+
+<div class="dark-band"><div class="container band-grid">
+ <div class="band-item"><strong>20+</strong><span>Years leadership experience stated</span></div>
+ <div class="band-item"><strong>60</strong><span>Vehicles & machinery listed</span></div>
+ <div class="band-item"><strong>8</strong><span>Selected project entries</span></div>
+ <div class="band-item"><strong>₹43 Cr</strong><span>Highest listed project value</span></div>
+</div></div>
+
+<section class="projects" id="projects">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">03 / PROJECT PORTFOLIO</div><h2>SELECTED<br>TRACK RECORD.</h2></div><p class="lead">Project names, periods and values below are taken from the supplied corporate profile.</p></div>
+  <div class="timeline"><article class="project-card reveal">
+      <div class="project-year">2014–15</div>
+      <div class="project-body">
+        <span class="project-value">₹9 Cr</span>
+        <h3>Power Grid Sub Station 400/220 KV</h3>
+        <p>Uravakonda</p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2015–17</div>
+      <div class="project-body">
+        <span class="project-value">₹18 Cr</span>
+        <h3>Techno Electric &amp; Engineering Ltd.</h3>
+        <p>Substation 400/220/132 KV</p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2017–18</div>
+      <div class="project-body">
+        <span class="project-value">₹12 Cr</span>
+        <h3>PLR Limited</h3>
+        <p>Gowravaram Reservoir</p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2017–18</div>
+      <div class="project-body">
+        <span class="project-value">₹8 Cr</span>
+        <h3>AMR Limited</h3>
+        <p>Gowravaram Reservoir</p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2018–19</div>
+      <div class="project-body">
+        <span class="project-value">₹11 Cr</span>
+        <h3>SRC BTP Project</h3>
+        <p></p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2019–24</div>
+      <div class="project-body">
+        <span class="project-value">₹43 Cr</span>
+        <h3>Ramco Cement Limited</h3>
+        <p></p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2019–24</div>
+      <div class="project-body">
+        <span class="project-value">₹17 Cr</span>
+        <h3>L&amp;T Limited (Ramco Cement)</h3>
+        <p></p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article>
+<article class="project-card reveal">
+      <div class="project-year">2024–25</div>
+      <div class="project-body">
+        <span class="project-value">₹18 Cr</span>
+        <h3>Techno Substation 720/400/220 KV</h3>
+        <p>Kurnool</p>
+        <div class="tags"><span>Earth Work • Drilling • Blasting</span></div>
+      </div>
+    </article></div>
+ </div>
+</section>
+
+<section class="fleet" id="fleet">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">04 / FLEET</div><h2>EQUIPMENT<br>DEPTH.</h2></div><p class="lead">The detailed source schedule states a total of 60 vehicles and machinery units.</p></div>
+  <div class="table-wrap"><table><thead><tr><th>Equipment / Vehicle</th><th>Capacity / Model</th><th>Qty</th></tr></thead><tbody><tr><td>Kobelco Excavator</td><td>380</td><td>1</td></tr>
+<tr><td>SANY Excavator</td><td>390</td><td>1</td></tr>
+<tr><td>L&amp;T Excavator</td><td>300</td><td>2</td></tr>
+<tr><td>SANY Excavator</td><td>240</td><td>3</td></tr>
+<tr><td>L&amp;T Excavator</td><td>210</td><td>2</td></tr>
+<tr><td>TATA PRIMA Tippers – 10 tyres</td><td>—</td><td>5</td></tr>
+<tr><td>Ashok Leyland Tipper – 10 Tyre</td><td>—</td><td>18</td></tr>
+<tr><td>Tipper – 12 Tyre</td><td>—</td><td>10</td></tr>
+<tr><td>Water Tanker</td><td>—</td><td>2</td></tr>
+<tr><td>Breaker Grader</td><td>—</td><td>1</td></tr>
+<tr><td>Roller (Wiper Max)</td><td>—</td><td>1</td></tr>
+<tr><td>Chain Dozer</td><td>—</td><td>1</td></tr>
+<tr><td>Crawler Drilling Machine</td><td>—</td><td>6</td></tr>
+<tr><td>Camper</td><td>—</td><td>3</td></tr>
+<tr><td>Diesel Tanker</td><td>—</td><td>1</td></tr>
+<tr><td>Breaker Machine</td><td>210</td><td>2</td></tr></tbody></table></div>
+ </div>
+</section>
+
+<section class="leadership" id="leadership">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">05 / LEADERSHIP & STANDARDS</div><h2>PEOPLE BEHIND<br>THE EXECUTION.</h2></div><p class="lead">Hands-on leadership, safety, quality and operational discipline are central themes in the supplied profile.</p></div>
+  <div class="leader-grid">
+   <article class="leader reveal"><div class="initials">NM</div><div class="role">Managing Director</div><h3>Mr. Nookaraju Mamidi</h3><p>Over 20 years of experience in earthwork, drilling, blasting and transportation projects, with hands-on expertise in site execution and project coordination.</p></article>
+   <article class="leader reveal"><div class="initials">DP</div><div class="role">Managing Director</div><h3>Mr. Dalavai Polonna</h3><p>Planning, coordination and execution across project teams, with emphasis on workflow, quantities, technical compliance and productivity.</p></article>
+  </div>
+  <div class="principles">
+   <div class="principle"><b>Safety</b><p>Training, risk assessment, compliance and safe operating procedures.</p></div>
+   <div class="principle"><b>Quality</b><p>Approved specifications, industry standards and quality-control processes.</p></div>
+   <div class="principle"><b>Environment</b><p>Minimize impact, conserve resources, comply with regulations and promote responsible construction practices.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="gallery">
+ <div class="container">
+  <div class="section-top"><div><div class="eyebrow">06 / VISUAL FIELD</div><h2>THE WORK,<br>UP CLOSE.</h2></div><p class="lead">Visual assets extracted from the supplied company profile are used here as the site's project gallery.</p></div>
+  <div class="gallery-grid"><button class="gallery-tile" data-lightbox="assets/ppt-image-1.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-1.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-2.png" aria-label="Open project image">
+      <img src="assets/ppt-image-2.png" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-3.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-3.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-4.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-4.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-5.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-5.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-6.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-6.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-7.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-7.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button>
+<button class="gallery-tile" data-lightbox="assets/ppt-image-8.jpg" aria-label="Open project image">
+      <img src="assets/ppt-image-8.jpg" alt="SVD Mining Works project visual" loading="lazy">
+      <span>VIEW PROJECT VISUAL</span>
+    </button></div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="container contact-grid">
+  <div><div class="eyebrow" style="color:#062718">07 / CONTACT</div><h2>LET’S BUILD<br>WHAT COMES NEXT.</h2><p>For project discussions, capability requirements or site-work enquiries, connect with SVD Mining Works in Anantapur, Andhra Pradesh.</p></div>
+  <div class="contact-card">
+   <div class="contact-row"><b>Managing Directors</b><span>D. Polonna / M. Nooka Raju</span></div>
+   <div class="contact-row"><b>Manager</b><span>K. Suresh</span></div>
+   <div class="contact-row"><b>Contact</b><span><a href="tel:+918897517736">+91 88975 17736</a> &nbsp; / &nbsp; <a href="tel:+919704149888">+91 97041 49888</a></span></div>
+   <div class="contact-row"><b>Office</b><span>D.NO.1-1-26A, 3RD ROAD, MUTHYALAMMA COLONY, ANANTAPUR, ANDHRA PRADESH – 515004</span></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="container footer-grid">
+ <div><div class="footer-brand">SVD MINING WORKS</div><p>Earth Works • Drilling • Blasting • Transportation</p></div>
+ <small>ANANTAPUR, ANDHRA PRADESH<br>2014 — PRESENT</small>
+</div></footer>
+
+<div class="lightbox" id="lightbox"><button class="close" id="close" aria-label="Close">×</button><img id="lightboxImg" alt="SVD project visual"></div>
+<script>
+const menu=document.getElementById('menu'), nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const lb=document.getElementById('lightbox'), lbi=document.getElementById('lightboxImg');
+document.querySelectorAll('[data-lightbox]').forEach(btn=>btn.addEventListener('click',()=>{lbi.src=btn.dataset.lightbox;lb.classList.add('open')}));
+document.getElementById('close').onclick=()=>lb.classList.remove('open');
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+</script>
+</body>
+</html>
